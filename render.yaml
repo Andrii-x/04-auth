@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: 04-auth
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: MONGO_URL
+        sync: false
